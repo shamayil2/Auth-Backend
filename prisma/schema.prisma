@@ -20,6 +20,8 @@ model Agent{
   id  Int   @id @default(autoincrement())
   name String
   email String @unique
+  education String?
+  experience String?
 }
 
 model User {
@@ -27,6 +29,9 @@ model User {
   email    String  @unique
   password String @default("temp")
   name     String?
+  otp           String?
+  otpExpiresAt  DateTime?
+  status        String   @default("PENDING")
 }
 
 
