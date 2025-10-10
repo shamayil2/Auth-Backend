@@ -25,7 +25,7 @@ model Agent{
 }
 
 model User {
-   id       String  @id @default(uuid())
+  id       String  @id @default(uuid())
   email    String  @unique
   password String @default("temp")
   name     String?

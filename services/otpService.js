@@ -25,11 +25,11 @@ async function sendEmailOTP(user) {
     from: process.env.SMTP_USER,
     to: user.email,
     subject: 'Your verification code for HiTouch CX',
-    text: `Your OTP is ${otp}. It expires in 5 minutes.`
+    text: `Your OTP is ${otp}. It expires in 15 minutes.`
   });
    }
    catch(error){
-    console.log("error sending otp")
+    console.log("Error Occured while sending OTP",error)
    }
 }
 
